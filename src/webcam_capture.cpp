@@ -74,11 +74,13 @@ int main(int argc, char *argv[])
       int y = image.rows/2-100;
       int width = 200;
       int height = 200;
+
+      cv::Rect rect(x, y, width, height);
       // Point 1 is the upper left corner of the rectangle
       cv::Point pt1(x, y);
-      // Point 1 is the bottom right corner of the rectangle
+      // Point 2 is the bottom right corner of the rectangle
       cv::Point pt2(x + width, y + height);
-      // calls the image, both points and the color of the rectangle
+      // Calls the image, both points and the color of the rectangle
       cv::rectangle(image, pt1, pt2, cv::Scalar(0, 255, 0));
 
     // Greyscale the inside of the rectangle
